@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @keyframes hack {
+        0% {
+          content: "3";
+        }
+
+        33.3% {
+          content: "2";
+        }
+
+        66.6% {
+          content: 1;
+        }
+      }
+      .btn {
+        margin: 500px;
+        width: 300px;
+        height: 230px;
+        background: tomato;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 80px;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 25px 0px #999999;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        width: 500px;
+        height: 350px;
+        background-image: url("https://pds.joongang.co.kr/news/component/htmlphoto_mmdata/202104/14/e8ce4317-59b1-469e-9d6a-9d71a567db33.jpg");
+        background-repeat: no-repeat;
+        animation: hack 0.3;
+      }
+
+      .btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 100px;
+        width: 500px;
+        height: 350;
+        background-color: red;
+        transition: all 0.5s;
+      }
+
+      .btn:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: whitesmoke;
+        transition: all 0.5s;
+        transform: rotateY(90deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="btn"></div>
+  </body>
+</html>
