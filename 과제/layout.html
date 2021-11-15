@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      header {
+        width: 100%;
+        background: tomato;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-weight: 800;
+        font-size: 100px;
+        text-shadow: 5px 5px 4px #222;
+      }
+
+      section {
+        width: 100%;
+        height: 1100px;
+        display: flex;
+      }
+
+      footer {
+        width: 100%;
+        height: 15%;
+        background: orange;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-weight: 800;
+        font-size: 100px;
+        text-shadow: 5px 5px 4px #222;
+      }
+
+      article {
+        flex: 3;
+        background: yellow;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-weight: 800;
+        font-size: 100px;
+        text-shadow: 5px 5px 4px #222;
+      }
+
+      aside {
+        flex: 1;
+        background: greenyellow;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-weight: 800;
+        font-size: 100px;
+        text-shadow: 5px 5px 4px #222;
+      }
+
+      ul {
+        width: 100%;
+        height: 100%;
+      }
+
+      @media screen and (max-width: 1330px) {
+        section {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header -->
+    <header>망나니</header>
+    <!-- main-->
+    <section>
+      <article>황좆</article>
+      <aside>백정</aside>
+    </section>
+    <!-- footer -->
+    <footer>숟가락 & 도구</footer>
+  </body>
+</html>
