@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <title>JS Bin</title>
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .sr-only {
+        display: none;
+      }
+
+      .cont-select {
+        width: 200px;
+        height: 254px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .btn-select {
+        width: 200px;
+        height: 40px;
+        border: 1px solid #c4c4c4;
+        background: #fff;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 14px 0 16px;
+      }
+
+      .btn-select::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 5px solid #c4c4c4;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+      }
+
+      .list-member {
+        display: none;
+        width: 200px;
+        height: 208px;
+        border: 1px solid #c4c4c4;
+        border-radius: 10px;
+        box-sizing: border-box;
+        box-shadow: 4px 4px 14px rgb(0, 0, 0, 0.15);
+        padding: 8px 7px;
+        /* display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center; */
+      }
+
+      .list-member li button {
+        width: 184px;
+        height: 30px;
+        border-radius: 8px;
+        background: #fff;
+        border: none;
+        text-align: left;
+        box-sizing: border-box;
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 10px;
+      }
+
+      .list-member li button:hover {
+        background: #f8e4ff;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class="sr-only">셀렉트 박스 만들기</h2>
+    <article class="cont-select">
+      <button class="btn-select">최애 프로그래밍 언어</button>
+      <ul class="list-member">
+        <li><button id="a" type="button">Python</button></li>
+        <li><button id="b" type="button">Java</button></li>
+        <li><button id="c" type="button">JavaScript</button></li>
+        <li><button id="d" type="button">C#</button></li>
+        <li><button id="e" type="button">C/C++</button></li>
+      </ul>
+    </article>
+
+    <script>
+      const btn = document.querySelector(".btn-select");
+      const list = document.querySelector(".list-member");
+      const btnLi = document.querySelector(".btn");
+      const a = document.querySelector("#a");
+      const b = document.querySelector("#b");
+      const c = document.querySelector("#c");
+      const d = document.querySelector("#d");
+
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("on");
+      });
+      list.addEventListener("click", (event) => {
+        if (event.target.nodeName === "BUTTON") {
+          btn.innerText = event.target.innerText;
+          btn.classList.remove("on");
+        }
+      });
+
+      btn.addEventListener("click", () => {
+        if (list.style.display === "none") {
+          list.style.display = "block";
+          btn.style.border = "1px solid #9b51e0";
+        } else {
+          list.style.display = "none";
+        }
+      });
+
+      a.addEventListener("click", () => {
+        if (list.style.display === "block") {
+          list.style.display = "none";
+          btn.style.border = "1px solid #c4c4c4";
+        }
+      });
+
+      b.addEventListener("click", () => {
+        if (list.style.display === "block") {
+          list.style.display = "none";
+          btn.style.border = "1px solid #c4c4c4";
+        }
+      });
+
+      c.addEventListener("click", () => {
+        if (list.style.display === "block") {
+          list.style.display = "none";
+          btn.style.border = "1px solid #c4c4c4";
+        }
+      });
+
+      d.addEventListener("click", () => {
+        if (list.style.display === "block") {
+          list.style.display = "none";
+          btn.style.border = "1px solid #c4c4c4";
+        }
+      });
+
+      e.addEventListener("click", () => {
+        if (list.style.display === "block") {
+          list.style.display = "none";
+          btn.style.border = "1px solid #c4c4c4";
+        }
+      });
+    </script>
+  </body>
+</html>
