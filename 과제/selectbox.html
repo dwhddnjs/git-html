@@ -15,7 +15,14 @@
       }
 
       .sr-only {
-        display: none;
+        position: absolute;
+        overflow: hidden;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        border: 0;
+        clip: rect(0, 0, 0, 0);
       }
 
       .cont-select {
@@ -131,6 +138,7 @@
       const b = document.querySelector("#b");
       const c = document.querySelector("#c");
       const d = document.querySelector("#d");
+
 
       // let result = []
 
